@@ -1,0 +1,424 @@
+/* Styles for the whole body */
+body {
+    min-height: 100vh;
+    background-image: url("/assets/images/furlodge-background.jpg");
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+    padding: 100px 0 100px;
+    position: relative;
+}
+
+h2 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+/* Media queries for changing the body padding for footer and header space */
+@media only screen and (max-width: 1025px) {
+    body {
+        padding: 100px 0 150px;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    body {
+        padding: 75px 0 150px;
+    }
+}
+
+/* Navbar styles */
+.top-bar, .top-bar ul {
+    background: white;
+}
+
+/* Setting style for logo in navbar */
+nav#mainNavigation.top-bar {
+    max-height: 75px;
+    border-bottom: 2px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+img#furlodge-logo {
+    max-width: 250px;
+    margin-left: 5px;
+}
+
+/* Setting styles for dropdown menu */
+a.host-dropdown, li.host-logout a {
+    font-size: 25px;
+    font-weight: 500;
+    color: black;
+}
+
+li.host-logout a:hover {
+    color: #1779ba;
+}
+
+.dropdown.menu li.is-dropdown-submenu-parent a::after {
+    display: none;
+}
+
+li.is-submenu-item.is-dropdown-submenu-item a {
+    color: black;
+    font-size: 18px;
+}
+
+li.is-submenu-item.is-dropdown-submenu-item a:hover {
+    color: #1779ba;
+}
+
+.is-dropdown-submenu {
+    border-radius: 5px 5px 5px 5px;
+}
+
+/* Media query for responsive navbar */
+@media only screen and (max-width: 650px) {
+    ul.dropdown.menu {
+        float: right;;
+    }
+    .top-bar .top-bar-left {
+        max-width: 200px;
+    }
+    .top-bar .top-bar-right {
+        max-width: 100px;
+    }
+    img#furlodge-logo {
+        max-width: 200px;
+    }
+}
+
+/* Styles for search form */
+main.card.grid-container.grid-x.align-center {
+    width: 95%;
+    max-width: 1000px;
+    align-self: center;
+    border-radius: 5px 5px 5px 5px;
+}
+
+h3 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 15px 0;
+    text-align: center;
+}
+
+label {
+    font-size: 16px;
+    margin-top: 18px;
+}
+
+input.form-input, select.form-input {
+    margin: 0 5px;
+    border-radius: 5px 5px 5px 5px;
+}
+
+fieldset.fieldset {
+    border: 0px;
+    padding: 5px 0;
+    margin-bottom: 0px;
+}
+
+label.choice-label {
+    color: #1779ba;
+    margin: 0 16px 0 16px;
+    font-size: 18px;
+    width: 25%;
+    border-radius: 5px 5px 5px 5px;
+}
+
+label.size-choice-label {
+    color: #1779ba;
+    margin: 0 16px 0 16px;
+    font-size: 18px;
+    width: 19%;
+    border-radius: 5px 5px 5px 5px;
+}
+
+button.button.primary.expanded.cell {
+    max-width: 75%;
+    margin: 25px auto;
+    border-radius: 5px 5px 5px 5px;
+    font-size: 18px;
+}
+
+/* Media query for responsive search form design */
+@media only screen and (max-width: 1025px) {
+    select.form-input, input.form-input {
+        width: 95%;
+    }
+    
+    label.choice-label {
+        width: 85%;
+    }
+
+    label.size-choice-label {
+        width: 93%;
+    }
+}
+
+@media only screen and (max-width: 840px) {
+    label.size-choice-label {
+        width: 92%;
+    }
+}
+
+@media only screen and (max-width: 821px) {
+    label.choice-label {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 746px) {
+    label.size-choice-label {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 648px) {
+    label.choice-label {
+        width: 79%;
+    }
+}
+
+@media only screen and (max-width: 648px) {
+    label.choice-label {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 585px) {
+    label.choice-label, label.size-choice-label {
+        width: 89%;
+    }
+}
+
+@media only screen and (max-width: 538px) {
+    label.choice-label, label.size-choice-label {
+        width: 86%;
+    }
+}
+
+@media only screen and (max-width: 436px) {
+    label.choice-label, label.size-choice-label {
+        width: 82%;
+    }
+}
+
+@media only screen and (max-width: 354px) {
+    label.choice-label, label.size-choice-label {
+        width: 78%;
+    }
+}
+
+
+
+/* Styles for Login Form */
+main.card.grid-container.grid-x.align-center.login {
+    width: 95%;
+    max-width: 750px;
+    align-self: center;
+    margin-top: 125px;
+    border-radius: 5px 5px 5px 5px;
+}
+
+/* Media query for responsive design */
+@media only screen and (max-width: 550px) {
+    main.card.grid-container.grid-x.align-center.login {
+        margin-top: 75px;
+    }
+}
+
+/* Styles for signup form */
+textarea.form-input {
+    margin: 0 5px;
+    border-radius: 5px 5px 5px 5px;
+}
+
+/* Media query for responsive design */
+@media only screen and (max-width: 550px) {
+    input.form-input, textarea.bio {
+        width: 95%;
+    }
+}
+
+/* Style for search results */
+img.medium-3.cell.profile-img, img.large-3.cell.profile-img {
+    max-width: 210px;
+    max-height: 210px;
+    margin: 15px 0;
+    padding: 0;
+}
+
+section.medium-6.cell.host-result {
+    float: right;
+    padding: 0 25px 25px;
+}
+
+h3.host-name {
+    text-align: left;
+    margin-bottom: 0px;
+}
+
+p.host-info-label {
+    font-size: 20px;
+    margin-bottom: 0px;
+}
+
+button.button.medium-2.cell {
+    max-width: 75%;
+    margin: auto;
+    border-radius: 5px 5px 5px 5px;
+    height: 100px;
+    font-size: 20px;
+}
+
+h2.card.grid-container.grid-x {
+    background: none;
+    border: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+div.booking-confirm.reveal {
+    text-align: center;
+}
+
+/* Media query for responsive design */
+@media only screen and (max-width: 650px) {
+    img.medium-3.cell.profile-img {
+        margin: 15px auto;
+    }
+    
+    button.button.medium-2.cell {
+        margin: 20px auto;
+        height: 75px;
+    }
+
+    h2.card.grid-container.grid-x {
+        font-size: 20px;
+    }
+}
+
+/* Styles for host profile */
+p.host-info {
+    margin: 0;
+}
+
+section.host-size, section.host-details {
+    margin: 16px 0 0;
+}
+
+section.medium-2.cell.host-info, section.medium-4.cell.host-info {
+    margin: 20px 20px 0;
+}
+
+section.medium-4.cell.host-info, section.medium-3.cell.host-info {
+    margin: 20px 0 0;
+}
+
+button.medium.cell.button {
+    max-width: 75%;
+    margin: 25px auto;
+    border-radius: 5px 5px 5px 5px;
+    font-size: 18px;
+}
+
+label.choice-label-edit {
+    color: #1779ba;
+    margin: 0 16px 0 16px;
+    font-size: 18px;
+    width: 75%;
+    border-radius: 5px 5px 5px 5px;
+}
+
+label.size-choice-label-edit {
+    color: #1779ba;
+    margin: 0 16px 0 16px;
+    font-size: 18px;
+    width: 90%;
+    border-radius: 5px 5px 5px 5px;
+}
+
+/* Media query for responsive design */
+@media only screen and (max-width: 640px) {
+    section.medium-2.cell.host-info {
+        margin: 0
+    }
+
+    label.choice-label-edit, label.size-choice-label-edit {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 566px) {
+    label.choice-label-edit, label.size-choice-label-edit {
+        width: 88%;
+    }
+}
+
+@media only screen and (max-width: 483px) {
+    label.choice-label-edit, label.size-choice-label-edit {
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width: 401px) {
+    label.choice-label-edit, label.size-choice-label-edit {
+        width: 83%;
+    }
+}
+
+@media only screen and (max-width: 361px) {
+    label.choice-label-edit, label.size-choice-label-edit {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 319px) {
+    label.choice-label-edit, label.size-choice-label-edit {
+        width: 78%;
+    }
+}
+
+/* Styles for booking info on host profile */
+div.card.grid-container.grid-x.align-center {
+    width: 95%;
+    max-width: 1000px;
+    align-self: center;
+    border-radius: 5px 5px 5px 5px;
+}
+
+/* Footer styles */
+footer.large.callout.secondary {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+    padding: 25px;
+    background-color: #1779ba;
+    color: white;
+}
+
+div.large-8.cell {
+    text-align: right;
+    font-size: 18px;
+}
+
+p.footer-fun {
+    padding: 0;
+}
+
+@media only screen and (max-width: 1025px) {
+    footer.large.callout.secondary {
+        text-align: center;
+    }
+
+    div.large-8.cell {
+        text-align: center;
+        font-size: 16px;
+    }
+
+    p.footer-fun {
+        text-align: center;
+    }
+}

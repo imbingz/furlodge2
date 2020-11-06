@@ -1,0 +1,98 @@
+{{!-- Navbar --}}
+<nav class="top-bar" id="mainNavigation">
+  <aside class="top-bar-left">
+    <h1>
+
+      <a href="/">
+        <img id="furlodge-logo" src="/assets/images/furlodge-logo.png" alt="FurLodge Logo" loading="lazy">
+      </a>
+    </h1>
+  </aside>
+  <aside class="top-bar-right">
+    <ul class="dropdown menu" data-dropdown-menu>
+      <li>
+        <a class="host-dropdown">Host</a>
+        <ul class="menu">
+          <li><a href="/signup">Become Host</a></li>
+          <li><a href="/login">Login</a></li>
+        </ul>
+      </li>
+  </ul>
+  </aside>
+</nav>
+
+{{!-- User Search Form --}}
+<main class="card grid-container grid-x align-center">
+  <h3 class="find-cozy">Find Cozy Comfort For Your Pet While You're Away!</h3>
+  <form id="search">
+
+    {{!-- Input for city where user is lookin for care. --}}
+    <div class="grid-container grid-x grid-padding-x">
+      <label class="large-4 cell">I am looking for care in
+        {{!-- <input class="form-input" id="city-input" type="text" placeholder="City" required> --}}
+        <select class="form-input" id="city-input" required>
+
+          <option value="" selected>Select A City</option>
+          <option value="Salt Lake City">Salt Lake City</option>
+          <option value="Orem">Orem</option>
+          <option value="Ogden">Ogden</option>
+          <option value="Provo">Provo</option>
+        </select>
+      </label>
+      <label class="large-4 cell">For how many pets (1-5)
+        <input type="number" id="pet-amount" name="pet_amt" class="form-input" value="0" min="1" max="5" required>
+      </label>
+      {{!-- Rate --}}
+      <label class="large-4 cell">
+        For what rate per Pet/Night ($20+)
+        <input type="number" id="rate" name="rate" class="form-input input-group-field" value="0" min="20" step="5" required>
+      </label>
+      {{!-- Choices for type of pet user is looking for care for. --}}
+      <fieldset class="fieldset medium-6 cell">
+        <legend>I am looking for care for my</legend>
+
+        <input type="checkbox" name="dog" value="" id="dogCare">
+
+        <label class="choice-label" for="dogCare">
+          <i class="fas fa-dog"></i>
+          Dog
+        </label>
+        <input type="checkbox" name="cat" value="" id="catCare">
+        <label class="choice-label" for="catCare">
+          <i class="fas fa-cat"></i>
+          Cat
+        </label>
+      </fieldset>
+
+      {{!-- Choice for the type of care user is looking for. --}}
+      <fieldset class="fieldset medium-6 cell">
+        <legend>Type of care I am looking for</legend>
+        <input type="checkbox" name="long_term" value="" id="long-term">
+        <label class="choice-label" for="long-term">
+          <i class="fas fa-suitcase"></i>
+          Boarding
+        </label>
+        <input type="checkbox" name="short_term" value="" id="short-term">
+        <label class="choice-label" for="short-term">
+          <i class="fas fa-cloud-sun"></i>
+          Day Care
+        </label>
+      </fieldset>
+
+      {{!-- Choices for the size of pet user is looking for care for. --}}
+      <fieldset class="fieldset cell">
+        <legend>My Pet Size</legend>
+        <input name="small" id="small" type="checkbox">
+        <label class="size-choice-label" for="small">Small (0-15lbs)</label>
+        <input name="medium" id="medium" type="checkbox">
+        <label class="size-choice-label" for="medium">Medium (15-40lbs)</label>
+        <input name="large" id="large" type="checkbox">
+        <label class="size-choice-label" for="large">Large (40-100lbs)</label>
+        <input name="giant" id="giant" type="checkbox">
+        <label class="size-choice-label" for="giant">Giant (100+)</label>
+      </fieldset>
+      <button type="submit" class="button primary expanded cell findhost-btn" href="#">Search for Cozy Care!</button>
+
+    </div>
+  </form>
+</main>

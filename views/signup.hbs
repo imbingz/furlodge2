@@ -1,0 +1,131 @@
+{{!-- Navbar --}}
+<nav class="top-bar" id="mainNavigation">
+  <aside class="top-bar-left">
+    <h1>
+
+      <a href="/">
+        <img id="furlodge-logo" src="/assets/images/furlodge-logo.png" alt="FurLodge Logo" loading="lazy">
+      </a>
+    </h1>
+  </aside>
+  <aside class="top-bar-right">
+    <ul class="dropdown menu" data-dropdown-menu>
+      <li>
+        <a class="host-dropdown">Host</a>
+        <ul class="menu">
+          <li><a href="/login">Login</a></li>
+        </ul>
+      </li>
+    </ul>
+  </aside>
+</nav>
+
+{{!-- Signup Form --}}
+<main class="card grid-container grid-x align-center">
+  <h3>Become FurLodge Host</h3>
+  <form class="signup">
+    <div class="grid-container grid-x grid-padding-x">
+     
+      {{!-- Email --}}
+      <label class="medium-6 cell">Email:
+        <input type="email" id="email" name="email" class="form-input input-group-field" required>
+      </label>
+      {{!-- Password --}}
+      <label class="medium-6 cell">Password:
+        <input type="password" id="password" name="password" class="form-input input-group-field" required>
+      </label>
+      {{!-- First Name --}}
+      <label class="medium-6 cell">First Name:
+        <input type="text" id="first-name" name="first_name" class="form-input input-group-field" required>
+      </label>
+      {{!-- Last Name --}}
+      <label class="medium-6 cell">Last Name:
+        <input type="text" id="last-name" name="last_name" class="form-input input-group-field" required>
+      </label>
+      {{!-- Phone Number --}}
+      <label class="medium-6 cell">Phone Number:
+        <input type="text" id="phone" name="phone" class="form-input input-group-field" pattern="[0-9]{10}"
+          title="Phone number should be 10 digit number without separators." required>
+      </label>
+      {{!-- City --}}
+      <label class="medium-6 cell">City:
+        <select class="form-input" id="city" name="city" required>
+          <option value="">Select A City</option>
+          <option value="Salt Lake City">Salt Lake City</option>
+          <option value="Orem">Orem</option>
+          <option value="Ogden">Ogden</option>
+          <option value="Provo" >Provo</option>
+        </select>
+      </label>
+      {{!-- Bio --}}
+      <label class="cell">
+        Bio:
+        <textarea type="text" id="bio" name="bio" class="form-input input-group-field" rows="4" cols="30" required
+          placeholder="Introduce yourself ... "></textarea>
+      </label>
+
+      {{!-- Dogs/Cats --}}
+      <fieldset class="fieldset medium-6 cell">
+        <legend>Open to sit:</legend>
+        <input data-min-required="1" type="checkbox" name="is_pup" id="dog" aria-labelledby="pet-type dog">
+        <label class="choice-label" for="dog">
+          <i class="fas fa-dog"></i>
+          Dog
+        </label>
+        <input type="checkbox" name="is_cat" id="cat" aria-labelledby="pet-type cat">
+        <label class="choice-label" for="cat">
+          <i class="fas fa-cat"></i>
+          Cat
+        </label>
+      </fieldset>
+      {{!-- Short Term/Long Term --}}
+      <fieldset class="fieldset medium-6 cell">
+        <legend>Type of sitting:</legend>
+        <input data-min-required="1" type="checkbox" name="short_term" id="short-term"
+          aria-labelledby="sit-type day sitting">
+        <label class="choice-label" for="short-term">
+          <i class="fas fa-cloud-sun"></i>
+          Day Care
+        </label>
+        <input type="checkbox" name="long_term" id="long-term" aria-labelledby="sit-type boarding">
+        <label class="choice-label" for="long-term">
+          <i class="fas fa-suitcase"></i>
+          Boarding
+        </label>
+      </fieldset>
+      {{!-- Pet Size --}}
+      <fieldset class="fieldset cell">
+        <legend>Pet Size Preference:</legend>
+        <input data-min-required="1" type="checkbox" name="small" id="small"
+          aria-labelledby="size-preference small">
+        <label class="size-choice-label" for="small">0-15lbs</label>
+        <input type="checkbox" name="med" id="medium" aria-labelledby="size-preference medium">
+        <label class="size-choice-label" for="medium">15-40lbs</label>
+        <input type="checkbox" name="large" id="large" aria-labelledby="size-preference large">
+        <label class="size-choice-label" for="large">40-100lbs</label>
+        <input type="checkbox" name="giant" id="giant" aria-labelledby="size-preference giant">
+        <label class="size-choice-label" for="giant">100+</label>
+      </fieldset>
+    
+      {{!-- Pet Amount --}}
+      <label class="large-6 cell">
+        Maximum number of pets willing to sit: (1-5)
+        <input type="number" id="pet-amount" name="pet_amt" class="form-input input-group-field" value="0" min="1"
+          max="5" required>
+      </label>
+      {{!-- Rate --}}
+      <label class="large-6 cell">
+        Rate/Pet/Day: ($20-$100)
+        <input type="number" id="rate" name="rate" class="form-input input-group-field" value="0" min="20" max="100" step="5"
+          required>
+      </label>
+    
+      {{!-- Availability --}}
+      <fieldset class="fieldset cell">
+        <input type="checkbox" id="availability" name="available" class="input-group-field">
+        <label class="size-choice" for="availability">I Am Available Immediately</label>
+      </fieldset>
+      <button class="button primary expanded cell signup-btn">Become Host</a>
+    </div>
+  </form>
+</main>

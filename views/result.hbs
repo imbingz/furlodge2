@@ -1,0 +1,82 @@
+{{!-- Navbar --}}
+<nav class="top-bar" id="mainNavigation">
+    <aside class="top-bar-left">
+        <h1>
+
+            <a href="/">
+                <img id="furlodge-logo" src="/assets/images/furlodge-logo.png" alt="FurLodge Logo" loading="lazy">
+            </a>
+        </h1>
+    </aside>
+    <aside class="top-bar-right">
+        <ul class="dropdown menu" data-dropdown-menu>
+            <li>
+                <a class="host-dropdown">Host</a>
+                <ul class="menu">
+                    <li><a href="/signup">Become Host</a></li>
+                    <li><a href="/login">Login</a></li>
+                </ul>
+            </li>
+        </ul>
+    </aside>
+</nav>
+
+<!-- button in the available host's li box to book that specific host -->
+<h2 class="card grid-container grid-x">Available Care In {{searchCity}}</h2>
+{{#each data}}
+<main class="card grid-container grid-x align-center">
+    <div class="grid-container grid-x grid-padding-x">
+        <img class="medium-3 cell profile-img" src="/assets/images/furlodge-profile-pic.jpg" alt="furlodge profile picture">
+        <section class="medium-3 cell host-result">
+            <h3 class="host-name">{{this.dataValues.first_name}} {{this.dataValues.last_name}}</h3>
+            <p>{{this.dataValues.bio}}</p>
+        </section>
+        <section class="medium-3 cell host-info">
+            <p class="host-info-label">Contact Information:
+            <p class="host-info">Email: {{this.dataValues.email}}</p>
+            <p>Phone: {{this.dataValues.phone}}</p>
+            <p class="host-info-label">Location:</p>
+            <p>{{this.dataValues.city}}</p>
+        </section>
+        <button data-open="exampleModal1" type="submit" data-id="{{this.dataValues.id}}" class="medium-2 cell button bookingBtn">Book</button>
+    </div>
+</main>
+{{/each}}
+
+<div class="reveal" id="exampleModal1" data-reveal data-close-on-click="false" data-close-on-esc="false">
+    <form class="booking">
+        {{!-- First Name --}}
+        <label class="medium-6 cell">First Name:
+            <input type="text" id="first-name" name="first_name" class="form-input input-group-field" required>
+        </label>
+        {{!-- Last Name --}}
+        <label class="medium-6 cell">Last Name:
+            <input type="text" id="last-name" name="last_name" class="form-input input-group-field" required>
+        </label>
+        {{!-- Email --}}
+        <label class="medium-6 cell">Email:
+            <input type="email" id="email" name="email" class="form-input input-group-field" required>
+        </label>
+        {{!-- Phone Number --}}
+        <label class="medium-6 cell">Phone Number:
+            <input type="text" id="phone" name="phone" class="form-input input-group-field" pattern="[0-9]{10}"
+                title="Phone number should be 10 digit number without separators." required>
+        </label>
+        {{!-- Booking Submit Button and Nested Modal open button --}}
+        <button type="submit" class="button primary expanded cell" id="submitBooking-btn"
+            data-open="exampleModal3">Submit Booking</button>
+    </form>
+    {{!-- Close Modal Button --}}
+    <button class="button primary expanded cell" data-close aria-label="Close modal" type="button">
+        Cancel
+    </button>
+</div>
+
+{{!-- Booking Confirmation - Nested modal --}}
+
+<div class="booking-confirm reveal" id="exampleModal3" data-reveal data-close-on-click="false" data-close-on-esc="false">
+    <h2 class="confirmation-header">Thank you for booking with <img src="/assets/images/furlodge-logo.png" alt="fur lodge"> </h2>
+    <a class="close-button" data-close aria-label="Close reveal" type="button" href="/">
+        <span aria-hidden="true">&times;</span>
+    </a>
+</div>

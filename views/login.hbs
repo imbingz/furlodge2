@@ -1,0 +1,37 @@
+{{!-- Navbar --}}
+<nav class="top-bar" id="mainNavigation">
+    <aside class="top-bar-left">
+        <h1>
+
+            <a href="/">
+                <img id="furlodge-logo" src="/assets/images/furlodge-logo.png" alt="FurLodge Logo" loading="lazy">
+            </a>
+        </h1>
+    </aside>
+    <aside class="top-bar-right">
+        <ul class="dropdown menu" data-dropdown-menu>
+            <li>
+                <a class="host-dropdown">Host</a>
+                <ul class="menu">
+                    <li><a href="/signup">Become Host</a></li>
+                </ul>
+            </li>
+        </ul>
+    </aside>
+</nav>
+
+{{!-- Login form --}}
+<main class="card grid-container grid-x align-center login">
+    <h3>Login</h3>
+    <form class="login">
+        <div class="grid-container grid-x grid-padding-x">
+            <label class="cell">Email
+                <input type="email" class="form-input form-control" id="email-input" placeholder="Email">
+            </label>
+            <label class="cell">Password
+                <input type="password" class="form-input form-control" id="password-input" placeholder="Password">
+            </label>
+            <button class="button primary expanded cell login-btn">Login</button>
+        </div>
+    </form>
+</main>
