@@ -31,6 +31,21 @@ $(() => {
         $("form#search").trigger("reset");
 
     }
+
+    function sendSearchData() {
+
+        console.log("in sendsearchdata ");
+
+        const userData = $.param(JSON.parse(localStorage.getItem("userData")));
+
+        $.get("/result?" + userData)
+            .then(() => {
+                window.location.href = "/result?" + userData;
+            })
+            .catch((err) => {
+                console.log((err.responseJSON.messsage));
+            });
+    }
     
 });
 
