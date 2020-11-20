@@ -30,7 +30,7 @@
     <div class="grid-container grid-x grid-padding-x">
       <label class="large-4 cell">I am looking for care in
         {{!-- <input class="form-input" id="city-input" type="text" placeholder="City" required> --}}
-        <select class="form-input" id="city-input" required>
+        <select class="form-input" id="city-input" name="city"required>
 
           <option value="" selected>Select A City</option>
           <option value="Salt Lake City">Salt Lake City</option>
@@ -51,13 +51,13 @@
       <fieldset class="fieldset medium-6 cell">
         <legend>I am looking for care for my</legend>
 
-        <input type="checkbox" name="dog" value="" id="dogCare">
+        <input type="checkbox" name="is_pup" id="dogCare">
 
         <label class="choice-label" for="dogCare">
           <i class="fas fa-dog"></i>
           Dog
         </label>
-        <input type="checkbox" name="cat" value="" id="catCare">
+        <input type="checkbox" name="is_cat" id="catCare">
         <label class="choice-label" for="catCare">
           <i class="fas fa-cat"></i>
           Cat
@@ -67,12 +67,12 @@
       {{!-- Choice for the type of care user is looking for. --}}
       <fieldset class="fieldset medium-6 cell">
         <legend>Type of care I am looking for</legend>
-        <input type="checkbox" name="long_term" value="" id="long-term">
+        <input type="checkbox" name="long_term" id="long-term">
         <label class="choice-label" for="long-term">
           <i class="fas fa-suitcase"></i>
           Boarding
         </label>
-        <input type="checkbox" name="short_term" value="" id="short-term">
+        <input type="checkbox" name="short_term" id="short-term">
         <label class="choice-label" for="short-term">
           <i class="fas fa-cloud-sun"></i>
           Day Care
