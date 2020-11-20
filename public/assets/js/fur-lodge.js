@@ -20,6 +20,17 @@ $(() => {
                 searchData[key] = fd.get(key);
             }
         }
+        
+        //Set localStorage
+        localStorage.setItem("userData", JSON.stringify(searchData));
+
+        //call ajax get  method 
+        sendSearchData();
+
+        //reset the form fields
+        $("form#search").trigger("reset");
+
+    }
     
 });
 
