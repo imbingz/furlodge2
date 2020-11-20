@@ -18,6 +18,9 @@ $(() => {
         }
         // console.log(data);
         postData(data);
+
+        //clear form field
+        $("form.signup").trigger("reset");
     }
         
 
@@ -28,7 +31,7 @@ $(() => {
                 window.location.href = "/profile";
             })
             .catch((err) => {
-                console.log((err.responseJSON.msg));
+                console.log((err.responseJSON.message));
             });
     }
 });
